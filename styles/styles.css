@@ -1,0 +1,147 @@
+/* --- Global Tokens and System Variables --- */
+:root {
+    --flag-green: #006747;   /* Agriculture and land prosperity */
+    --flag-gold: #F1B514;    /* Mineral wealth and heritage */
+    --flag-red: #D21034;     /* Liberation history */
+    --flag-black: #000000;   /* Native populations and heritage */
+    --flag-white: #FFFFFF;   /* Peace and structural progress */
+    --text-primary: #1a1a1a;
+    --background-slate: #f4f6f8;
+    --card-surface: #ffffff;
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- Base System Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-primary);
+    background-color: var(--background-slate);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--flag-green);
+    color: var(--flag-white);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 6px solid var(--flag-gold);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    color: var(--flag-gold);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* --- Mobile First Component Layout --- */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1.5rem;
+}
+
+.hero-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card {
+    background-color: var(--card-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--flag-red);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: var(--flag-green);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--background-slate);
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.mobile-weather-icon {
+    width: 64px;
+    height: 64px;
+}
+
+footer {
+    background-color: var(--flag-black);
+    color: var(--flag-white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    border-top: 6px solid var(--flag-red);
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+.last-mod {
+    color: var(--flag-gold);
+    font-size: 0.85rem;
+}
+
+/* --- Responsive Layout Breakpoint Engine (Wider Screens) --- */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 2rem auto;
+    }
+
+    .hero-container {
+        grid-column: 1 / -1;
+    }
+
+    /* Target Rule: Terminate Visibility of Mobile SVG Visual inside Viewport Expansions */
+    .mobile-weather-icon {
+        display: none;
+    }
+
+    /* Target Rule: Pseudo-Element Emoticon Generation on Expanded Grid Configurations */
+    .weather-heading::after {
+        content: " ⛅";
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe - The Jewel of Africa</title>
+    <meta name="description" content="W03 Country Page project for Zimbabwe, exploring rich cultural landmarks, demographic snapshots, and localized weather data.">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- JavaScript Deployment with Defer Execution Guard -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Zimbabwe</h1>
+        <p class="sub-title">🏠 House of Stone</p>
+    </header>
+
+    <main>
+        <!-- Hero Section using Adaptive WebP Formats -->
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/vicfalls-large.webp" media="(min-width: 768px)">
+                <img src="images/vicfalls-small.webp" alt="The majestic Mosi-oa-Tunya, Victoria Falls in Zimbabwe" loading="lazy">
+            </picture>
+        </div>
+
+        <!-- Demographic Overview Profile Card -->
+        <section class="card data-card">
+            <h2>Overview Profile</h2>
+            <ul>
+                <li><strong>Capital:</strong> Harare</li>
+                <li><strong>Population:</strong> ~16.8 Million</li>
+                <li><strong>Official Languages:</strong> 16 (Shona, Ndebele, English, etc.)</li>
+                <li><strong>Currency:</strong> Zimbabwe Gold (ZiG) / USD</li>
+                <li><strong>Time Zone:</strong> Central Africa Time (UTC+2)</li>
+            </ul>
+        </section>
+
+        <!-- Weather Metrics Processing Module -->
+        <section class="card weather-card">
+            <h2 class="weather-heading">Weather</h2>
+            <div class="weather-content">
+                <!-- SVG Icon Layout Rule: Explicitly Rendered in Mobile Layout Window -->
+                <img src="images/weather-icon.svg" alt="Localized weather dynamic illustration" class="mobile-weather-icon">
+                
+                <div class="weather-metrics">
+                    <p><strong>Temperature:</strong> <span id="temp-value">10</span> °C</p>
+                    <p><strong>Conditions:</strong> Crisp & Clear</p>
+                    <p><strong>Wind Speed:</strong> <span id="wind-value">4,8</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Brain Victor Murara | Bulawayo/Harare, Zimbabwe</p>
+        <p class="last-mod">Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
