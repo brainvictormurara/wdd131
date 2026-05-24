@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - WDD 131</title>
+    <meta name="description" content="W05 Product Review Form assignment for WDD 131: Dynamic Web Fundamentals.">
+    <meta name="author" content="Brain Victor Murara">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Portal</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <h2>Share Your Experience</h2>
+            <p>Fields marked with an asterisk (<span class="required-star">*</span>) are required.</p>
+
+            <div class="form-group">
+                <label for="product-name">Product Name <span class="required-star">*</span></label>
+                <select id="product-name" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <fieldset class="rating-fieldset">
+                <legend>Overall Rating <span class="required-star">*</span></legend>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" title="5 stars">☆</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars">☆</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 stars">☆</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars">☆</label>
+                    
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star">☆</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="install-date">Date of Installation <span class="required-star">*</span></label>
+                <input type="date" id="install-date" name="installDate" required>
+            </div>
+
+            <fieldset class="features-fieldset">
+                <legend>Useful Features (Check all that apply)</legend>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feature-performance" name="features" value="performance">
+                    <label for="feature-performance">Performance</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feature-design" name="features" value="design">
+                    <label for="feature-design">Design & Aesthetics</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feature-durability" name="features" value="durability">
+                    <label for="feature-durability">Durability</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feature-ease" name="features" value="easeOfUse">
+                    <label for="feature-ease">Ease of Use</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="written-review" name="writtenReview" rows="5" placeholder="Tell us what you liked or disliked..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="user-name" name="userName" placeholder="e.g. Jane Doe">
+            </div>
+
+            <input type="submit" value="Submit Review" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Brain Victor Murara | Zimbabwe</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
