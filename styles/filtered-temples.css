@@ -1,0 +1,145 @@
+/* ==========================================================================
+   WDD 131 - BASE & MOBILE STYLES (filtered-temples.css)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333; /* Neutral Dark text */
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #3f3f8f; /* Color 1: Primary Theme */
+    color: #ffffff;
+    padding: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Menu */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: yellow; /* Color 2: Hover Accent */
+}
+
+/* Main Layout Elements */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #3f3f8f;
+}
+
+/* Dynamic State Heading */
+main h2 {
+    text-align: center;
+    margin: 1rem 0 1.5rem 0;
+    color: #333333;
+}
+
+/* Grid Framework Setup */
+
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Temple Figure Card Elements */
+
+figure {
+    border: 1px solid #cccccc; /* Neutral Gray Border */
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left; /* Switched to left for cleaner data reading alignment */
+    background-color: #f4f4f4; /* Color 3: Neutral Light Backing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+figure h3 {
+    color: #3f3f8f;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+figure p {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+}
+
+figure p strong {
+    color: #3f3f8f;
+}
+
+figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Keeps image ratios stable and well-proportioned */
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #3f3f8f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   DESKTOP RESPONSIVE QUERY (INTEGRATING YOUR LARGE CSS CODES)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
