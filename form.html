@@ -24,22 +24,26 @@
                 <select id="product-name" name="productName" required>
                     <option value="" disabled selected>Select a Product ...</option>
                 </select>
-            <div class="stars">
-    <input type="radio" id="star5" name="rating" value="5" required>
-    <label for="star5" title="5 stars">☆</label>
-    
-    <input type="radio" id="star4" name="rating" value="4" required>
-    <label for="star4" title="4 stars">☆</label>
-    
-    <input type="radio" id="star3" name="rating" value="3" required>
-    <label for="star3" title="3 stars">☆</label>
-    
-    <input type="radio" id="star2" name="rating" value="2" required>
-    <label for="star2" title="2 stars">☆</label>
-    
-    <input type="radio" id="star1" name="rating" value="1" required>
-    <label for="star1" title="1 star">☆</label>
-</div>
+            </div>
+
+            <fieldset class="rating-fieldset">
+                <legend>Overall Rating <span class="required-star">*</span></legend>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" title="5 stars">☆</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4" title="4 stars">☆</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3" title="3 stars">☆</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2" title="2 stars">☆</label>
+                    
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1" title="1 star">☆</label>
+                </div>
             </fieldset>
 
             <div class="form-group">
