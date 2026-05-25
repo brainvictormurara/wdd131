@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica;
     background-color: #fafafa;
     color: var(--color-2-charcoal);
     line-height: 1.6;
@@ -80,7 +80,8 @@ input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid var(--color-1-green);
+    border: 2px solid var(--color-1-green);
+    outline: 0px solid #00000000;
 }
 
 /* --- Fieldsets (Ratings & Checkboxes) --- */
