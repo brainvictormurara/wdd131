@@ -14,11 +14,11 @@
 }
 
 body {
-    font-family: Arial, Helvetica;
+    font-family: inherit;
     background-color: #fafafa;
     color: var(--color-2-charcoal);
     line-height: 1.6;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 header, footer {
@@ -150,7 +150,6 @@ legend {
 }
 
 .optional {
-    font-size: 0.85rem;
     font-weight: normal;
     color: #616161;
 }
@@ -194,7 +193,7 @@ legend {
 /* --- Media Queries (Satisfies Audit Requirement) --- */
 @media (max-width: 480px) {
     body {
-        padding: 10px;
+        padding: 0.6rem;
     }
     form {
         padding: 1.5rem;
