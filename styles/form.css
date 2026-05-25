@@ -1,26 +1,28 @@
-/* --- Strict 3-Color Theme Variable Definitions --- */
+/* --- STRICT 3-COLOR THEME --- */
 :root {
-    --color-1-green: #2e7d32;      /* Primary */
-    --color-2-charcoal: #222222;   /* Secondary */
-    --color-3-lightgray: #e0e0e0;  /* Tertiary */
+    --green: #2e7d32;
+    --charcoal: #222222;
+    --lightgray: #e0e0e0;
 }
 
-/* --- Global Resets & Typography --- */
+/* --- GLOBAL RESET --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* --- PAGE LAYOUT --- */
 body {
-    font-family: inherit;
-    background-color: var(--color-3-lightgray);
-    color: var(--color-2-charcoal);
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    color: #222222;
     line-height: 1.6;
     padding: 1.25rem;
 }
 
-header, footer {
+header,
+footer {
     text-align: center;
     padding: 1.5rem;
     margin: 0 auto;
@@ -32,17 +34,17 @@ main {
     margin: 1.5rem auto;
 }
 
-/* --- Form Layout & Structural Elements --- */
+/* --- FORM STYLING --- */
 form {
-    background-color: var(--color-3-lightgray);
+    background-color: #e0e0e0;
     padding: 2.5rem;
+    border: 1px solid #222222;
     border-radius: 8px;
-    border: 1px solid var(--color-2-charcoal);
 }
 
 form h2 {
+    color: #2e7d32;
     margin-bottom: 0.5rem;
-    color: var(--color-1-green);
 }
 
 form > p {
@@ -51,9 +53,9 @@ form > p {
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 
 label {
@@ -61,17 +63,17 @@ label {
     margin-bottom: 0.5rem;
 }
 
-/* Text Inputs, Dropdowns, and Textareas */
+/* --- INPUTS --- */
 input[type="text"],
 input[type="date"],
 select,
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--color-2-charcoal);
-    background-color: var(--color-3-lightgray);
-    color: var(--color-2-charcoal);
+    border: 1px solid #222222;
     border-radius: 4px;
+    background-color: #e0e0e0;
+    color: #222222;
     font-size: 1rem;
 }
 
@@ -79,13 +81,13 @@ input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus {
-    border: 2px solid var(--color-1-green);
+    border: 2px solid #2e7d32;
     outline: none;
 }
 
-/* --- Fieldsets (Ratings & Checkboxes) --- */
+/* --- FIELDSETS --- */
 fieldset {
-    border: 1px solid var(--color-2-charcoal);
+    border: 1px solid #222222;
     border-radius: 6px;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
@@ -96,7 +98,7 @@ legend {
     padding: 0 0.5rem;
 }
 
-/* Checkboxes */
+/* --- CHECKBOXES --- */
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -109,7 +111,7 @@ legend {
     margin: 0;
 }
 
-/* --- Dynamic Star Rating System (AA Contrast Accessible) --- */
+/* --- STAR RATING --- */
 .stars {
     display: flex;
     flex-direction: row-reverse;
@@ -120,59 +122,56 @@ legend {
 
 .stars input[type="radio"] {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
     opacity: 0;
+    pointer-events: none;
 }
 
 .stars label {
     cursor: pointer;
-    color: var(--color-2-charcoal); 
+    color: #222222;
     margin: 0;
     transition: color 0.1s ease;
 }
 
-/* Turn stars green when selected or hovered over */
 .stars input[type="radio"]:checked ~ label,
 .stars label:hover,
 .stars label:hover ~ label {
-    color: var(--color-1-green);
+    color: #2e7d32;
 }
 
-/* --- Buttons & Helpers --- */
+/* --- HELPERS --- */
 .required-star {
-    color: var(--color-1-green);
+    color: #2e7d32;
     font-weight: bold;
     margin-left: 2px;
 }
 
 .optional {
+    color: #222222;
     font-weight: normal;
-    color: var(--color-2-charcoal);
 }
 
+/* --- BUTTON --- */
 .submit-btn {
-    background-color: var(--color-1-green);
-    color: var(--color-3-lightgray);
-    border: none;
+    width: 100%;
     padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2e7d32;
+    color: #e0e0e0;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
 }
 
 .submit-btn:hover {
     opacity: 0.9;
 }
 
-/* --- Confirmation Page Specifics --- */
+/* --- CONFIRMATION PAGE --- */
 .confirmation-box {
-    background-color: var(--color-3-lightgray);
-    border: 2px solid var(--color-1-green);
+    background-color: #e0e0e0;
+    border: 2px solid #2e7d32;
     border-radius: 8px;
     padding: 2.5rem;
     text-align: center;
@@ -180,23 +179,25 @@ legend {
 
 .counter-badge {
     display: inline-block;
-    background-color: var(--color-1-green);
-    color: var(--color-3-lightgray);
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin: 1rem 0;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
-    margin: 1rem 0;
+    background-color: #2e7d32;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* --- Media Queries (Satisfies Audit Requirement) --- */
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 480px) {
     body {
         padding: 0.6rem;
     }
+
     form {
         padding: 1.5rem;
     }
+
     .stars {
         font-size: 1.8rem;
     }
