@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: "Segoe UI", "Arial", "Helvetica";
+    font-family: sans-serif;
     background-color: #fafafa;
     color: var(--color-2-charcoal);
     line-height: 1.6;
@@ -73,7 +73,6 @@ textarea {
     background-color: var(--canvas-white);
     color: var(--color-2-charcoal);
     border-radius: 4px;
-    font-family: inherit;
     font-size: 1rem;
 }
 
