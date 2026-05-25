@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", "Arial", "Helvetica";
     background-color: #fafafa;
     color: var(--color-2-charcoal);
     line-height: 1.6;
