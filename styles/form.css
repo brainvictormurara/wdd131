@@ -3,8 +3,6 @@
     --color-1-green: #2e7d32;      /* Primary */
     --color-2-charcoal: #222222;   /* Secondary */
     --color-3-lightgray: #e0e0e0;  /* Tertiary */
-    --color-4-background: #fafafa;
-    --color-5-transparent: transparent;
 }
 
 /* --- Global Resets & Typography --- */
@@ -16,7 +14,7 @@
 
 body {
     font-family: inherit;
-    background-color: var(--color-4-background);
+    background-color: var(--color-3-lightgray);
     color: var(--color-2-charcoal);
     line-height: 1.6;
     padding: 1.25rem;
@@ -36,10 +34,10 @@ main {
 
 /* --- Form Layout & Structural Elements --- */
 form {
-    background-color: var(--color-4-background);
+    background-color: var(--color-3-lightgray);
     padding: 2.5rem;
     border-radius: 8px;
-    border: 1px solid var(--color-3-lightgray);
+    border: 1px solid var(--color-2-charcoal);
 }
 
 form h2 {
@@ -70,8 +68,8 @@ select,
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--color-3-lightgray);
-    background-color: var(--color-4-background);
+    border: 1px solid var(--color-2-charcoal);
+    background-color: var(--color-3-lightgray);
     color: var(--color-2-charcoal);
     border-radius: 4px;
     font-size: 1rem;
@@ -82,12 +80,12 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
     border: 2px solid var(--color-1-green);
-    outline: 0px solid var(--color-5-transparent);
+    outline: none;
 }
 
 /* --- Fieldsets (Ratings & Checkboxes) --- */
 fieldset {
-    border: 1px solid var(--color-3-lightgray);
+    border: 1px solid var(--color-2-charcoal);
     border-radius: 6px;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
@@ -131,7 +129,7 @@ legend {
 
 .stars label {
     cursor: pointer;
-    color: var(--color-3-lightgray); 
+    color: var(--color-2-charcoal); 
     margin: 0;
     transition: color 0.1s ease;
 }
@@ -157,8 +155,8 @@ legend {
 
 .submit-btn {
     background-color: var(--color-1-green);
-    color: var(--color-4-background);
-    border: 0px solid var(--color-5-transparent);
+    color: var(--color-3-lightgray);
+    border: none;
     padding: 0.85rem 2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -173,7 +171,7 @@ legend {
 
 /* --- Confirmation Page Specifics --- */
 .confirmation-box {
-    background-color: var(--color-4-background);
+    background-color: var(--color-3-lightgray);
     border: 2px solid var(--color-1-green);
     border-radius: 8px;
     padding: 2.5rem;
@@ -183,7 +181,7 @@ legend {
 .counter-badge {
     display: inline-block;
     background-color: var(--color-1-green);
-    color: var(--color-4-background);
+    color: var(--color-3-lightgray);
     font-size: 1.5rem;
     font-weight: bold;
     padding: 0.5rem 1.5rem;
