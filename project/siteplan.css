@@ -4,6 +4,10 @@
     --dark-charcoal: #222222;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,6 +17,8 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
+
 header {
     background-color: var(--primary-green);
     color: white;
@@ -20,18 +26,29 @@ header {
     padding: 20px;
 }
 
+header h1 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Main Layout */
+
 main {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
 
+/* Sections */
+
 section {
-    background: white;
+    background-color: white;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
 }
+
+/* Typography */
 
 h1,
 h2,
@@ -40,11 +57,19 @@ h3 {
     color: var(--primary-green);
 }
 
+p,
+li {
+    font-size: 1rem;
+}
+
+/* Color Boxes */
+
 .color-box {
     padding: 15px;
     margin-top: 10px;
     color: white;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .green {
@@ -59,6 +84,8 @@ h3 {
     background-color: #222222;
 }
 
+/* Typography Examples */
+
 .poppins {
     font-family: 'Poppins', sans-serif;
 }
@@ -71,15 +98,54 @@ h3 {
     font-family: 'Merriweather', serif;
 }
 
+/* Wireframes */
+
 pre {
-    background-color: #eeeeee;
+    background-color: #EEEEEE;
     padding: 15px;
     overflow-x: auto;
+    white-space: pre-wrap;
+    border-radius: 4px;
 }
+
+/* Footer */
 
 footer {
     background-color: var(--primary-green);
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    pre {
+        font-size: 0.8rem;
+    }
 }
