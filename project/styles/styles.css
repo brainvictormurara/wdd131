@@ -1,0 +1,200 @@
+/* ==========================================================================
+   BYU-I COMPLIANT 3-COLOR RULE SCHEMA
+   1. Primary Brand: #1b4332 (Forest Green)
+   2. Accent Highlight: #d4af37 (Harvest Gold)
+   3. Readable Text: #212529 (Charcoal Dark)
+   ========================================================================== */
+:root {
+    --primary: #1b4332;
+    --accent: #d4af37;
+    --text: #212529;
+    --clean-white: #ffffff;
+    --body-bg: #fdfdfd;
+}
+
+/* Global Resets & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, Times, serif;
+    background-color: var(--body-bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Header & Navigation Layout (Mobile-First Flexbox) */
+header {
+    background-color: var(--primary);
+    padding: 1.5rem 1rem;
+    border-bottom: 4px solid var(--accent);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-text h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--clean-white);
+    font-size: 1.6rem;
+    line-height: 1.1;
+}
+
+.site-subtitle {
+    font-family: Arial, sans-serif;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    color: var(--clean-white);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Main Layout & Grid Architectures */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.layout-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Cards Grid Layout (Responsive Breakpoints) */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.guide-card {
+    background-color: var(--clean-white);
+    border: 1px solid rgba(33, 37, 41, 0.1);
+    border-left: 5px solid var(--primary);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Forms Style */
+.form-container {
+    background-color: var(--clean-white);
+    padding: 2rem;
+    border: 1px solid rgba(33, 37, 41, 0.1);
+    border-radius: 4px;
+}
+
+.agro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.agro-form label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.agro-form input, .agro-form select, .agro-form textarea {
+    padding: 10px;
+    border: 1px solid rgba(33, 37, 41, 0.2);
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: var(--clean-white);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Global Sticky Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--clean-white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media Queries for Large Displays */
+@media (min-width: 750px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .intro-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

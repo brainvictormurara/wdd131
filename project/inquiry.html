@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Inquiry Portal - Smart Farming</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-brand">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Smart Farming Zimbabwe Logo" width="60" height="60">
+                </a>
+                <div class="brand-text">
+                    <h1>Smart Farming</h1>
+                    <p class="site-subtitle">Crop Management in Zimbabwe</p>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="management.html">Management Guides</a>
+                <a href="inquiry.html" class="active">Yield Inquiry</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Regional Yield Evaluation Request</h2>
+        <div class="form-container">
+            <form class="agro-form" action="#" method="get">
+                <fieldset>
+                    <legend>Farmer Identification</legend>
+                    
+                    <label for="farmer-name">Full Name</label>
+                    <input type="text" id="farmer-name" name="farmerName" required placeholder="e.g. Brain Victor Murara">
+                    
+                    <label for="region-select">Agricultural Region</label>
+                    <select id="region-select" name="region" required>
+                        <option value="" disabled selected>Select your province...</option>
+                        <option value="mash-central">Mashonaland Central</option>
+                        <option value="mash-west">Mashonaland West</option>
+                        <option value="manicaland">Manicaland</option>
+                        <option value="mat-north">Matabeleland North</option>
+                        <option value="midlands">Midlands</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Current Field Data</legend>
+                    
+                    <label for="crop-type">Primary Crop</label>
+                    <input type="text" id="crop-type" name="cropType" required placeholder="e.g. Maize, Soybeans">
+                    
+                    <label for="notes">Soil or Irrigation Challenges</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Describe current tillage style or water limitations..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Smart Farming Portal | Brain Victor Murara | Zimbabwe | BYU-Pathway Worldwide</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+        <p><a href="references.html">Sources &amp; References Page</a></p>
+    </footer>
